@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This is the page setup.
+         It tells the browser how to display the website and
+         helps the page fit correctly on phones and computers. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fitness Hub helps beginners build strength, learn workouts, and stay motivated.">
+    <title>Fitness Hub | Home</title>
+
+    <!-- This connects the shared CSS file to the homepage.
+         The CSS controls colors, spacing, layout, and responsive design. -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- This is the sticky website header.
+         It displays the logo and links to all five pages.
+         The same header will be used throughout the website. -->
+    <header class="site-header">
+
+        <!-- This is a temporary SVG logo.
+             The circle represents fitness and the text shows the
+             website name. A custom logo will replace it later. -->
+        <a href="index.html" class="logo" aria-label="Fitness Hub Home">
+            <svg width="48" height="48" viewBox="0 0 48 48"
+                 role="img" aria-label="Fitness Hub logo">
+                <circle cx="24" cy="24" r="21" fill="#f97316"></circle>
+                <text x="24" y="30" text-anchor="middle"
+                      fill="#111827" font-size="15"
+                      font-weight="bold">FH</text>
+            </svg>
+            <span>Fitness Hub</span>
+        </a>
+
+        <!-- This is the mobile menu button.
+             On smaller screens, it allows visitors to open
+             and close the navigation links. -->
+        <button class="menu-toggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            &#9776;
+        </button>
+
+        <!-- This is the main navigation.
+             It connects all five website pages so visitors
+             can move around the site easily. -->
+        <nav id="main-navigation" class="site-nav" aria-label="Main navigation">
+            <a href="index.html" aria-current="page">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </header>
+
+    <!-- This is the main content of the homepage.
+         It contains the introduction, fitness features,
+         and buttons that guide visitors to other pages. -->
+    <main>
+
+        <!-- This is the hero section.
+             It introduces Fitness Hub with a headline,
+             short description, image, and action button.
+             CSS will make this section at least 80vh tall. -->
+        <section class="hero" aria-labelledby="hero-title">
+
+            <div class="hero-content">
+                <h1 id="hero-title">Build Strength. Stay Motivated.</h1>
+
+                <p>
+                    Start your fitness journey with simple workouts,
+                    helpful tips, and motivation to reach your goals.
+                </p>
+
+                <!-- This button takes visitors to the Services page.
+                     It helps beginners find workout options. -->
+                <a href="services.html" class="btn btn-primary">
+                    Explore Workouts
+                </a>
+            </div>
+
+            <!-- This is the homepage fitness image.
+                 The alt text describes the picture for visitors
+                 who use screen readers. -->
+            <img src="img/fitness-hero.svg"
+                 alt="Illustration of fitness equipment including a dumbbell"
+                 class="hero-image">
+
+        </section>
+
+        <!-- This is the features section.
+             It shows three main benefits of Fitness Hub.
+             CSS Grid or Flexbox will arrange the cards in
+             a row on computers and stack them on phones. -->
+        <section class="features" aria-labelledby="features-title">
+
+            <div class="section-heading">
+                <h2 id="features-title">What Fitness Hub Offers</h2>
+
+                <p>
+                    Everything you need to start building
+                    healthy fitness habits.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+
+                <!-- This card introduces beginner workouts.
+                     It helps visitors understand that the
+                     exercises are easy to follow. -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">💪</div>
+                    <h3>Beginner Workouts</h3>
+                    <p>
+                        Follow simple exercises that help you
+                        build strength and improve your fitness.
+                    </p>
+                </article>
+
+                <!-- This card introduces fitness guidance.
+                     It shows visitors how the website can
+                     help them develop better habits. -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🏋️</div>
+                    <h3>Fitness Tips</h3>
+                    <p>
+                        Learn helpful tips about exercise,
+                        recovery, and staying consistent.
+                    </p>
+                </article>
+
+                <!-- This card introduces motivation.
+                     It encourages visitors to keep working
+                     toward their personal fitness goals. -->
+                <article class="feature-card">
+                    <div class="feature-icon" aria-hidden="true">🔥</div>
+                    <h3>Daily Motivation</h3>
+                    <p>
+                        Stay focused, build confidence, and
+                        keep making progress every day.
+                    </p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- This is the second call-to-action section.
+             It encourages visitors to contact Fitness Hub
+             after learning about the website's features. -->
+        <section class="cta-section" aria-labelledby="cta-title">
+
+            <h2 id="cta-title">Ready to Start Your Fitness Journey?</h2>
+
+            <p>
+                Take the first step toward becoming
+                stronger and healthier.
+            </p>
+
+            <a href="contact.html" class="btn btn-primary">
+                Get Started Today
+            </a>
+
+        </section>
+
+    </main>
+
+    <!-- This is the shared website footer.
+         It shows copyright information, contact details,
+         and navigation links at the bottom of every page. -->
+    <footer class="site-footer">
+
+        <p>&copy; 2026 Fitness Hub. All rights reserved.</p>
+
+        <p>
+            Contact:
+            <a href="mailto:hello@fitnesshub.example">
+                hello@fitnesshub.example
+            </a>
+        </p>
+
+        <!-- These footer links give visitors another way
+             to navigate the five pages of the website. -->
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+    </footer>
+
+    <!-- This connects the shared JavaScript file.
+         The script will control the mobile hamburger menu
+         and can support other interactive features later. -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

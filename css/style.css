@@ -1,0 +1,382 @@
+
+/* These are the website's main colors and fonts.
+   CSS variables keep the design consistent across all five pages.
+   Changing one variable updates every place that uses it. */
+:root {
+    --background: #111827;
+    --surface: #1f2937;
+    --primary: #f97316;
+    --accent: #fdba74;
+    --text: #f9fafb;
+    --muted: #d1d5db;
+}
+
+/* This resets default spacing and sets box sizing.
+   Border-box includes padding and borders in element widths.
+   This makes responsive layouts easier to control. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* This styles the whole website.
+   It uses a dark background, light text, and fluid body text.
+   clamp() makes the font size adjust to different screens. */
+body {
+    font-family: Arial, sans-serif;
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    line-height: 1.6;
+    background-color: var(--background);
+    color: var(--text);
+}
+
+/* These rules prevent images from overflowing.
+   The width adjusts to the available space.
+   Height auto keeps the image's original proportions. */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* These rules make links inherit readable colors.
+   The underline on hover helps visitors recognize links. */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* This is the sticky header shared by all five pages.
+   Flexbox puts the logo on the left and navigation on the right.
+   Sticky positioning keeps the header visible while scrolling. */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    padding: 16px 6%;
+    background-color: var(--surface);
+    border-bottom: 1px solid #374151;
+}
+
+/* This styles the Fitness Hub logo.
+   Flexbox places the SVG circle next to the website name.
+   The gap creates space between the two parts. */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.logo:hover {
+    text-decoration: none;
+}
+
+/* This styles the navigation links.
+   Flexbox arranges them in one horizontal row.
+   The gap keeps the links separated and easy to click. */
+.site-nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.site-nav a {
+    font-weight: 600;
+    transition: color 0.2s ease;
+}
+
+/* These rules highlight navigation interactions.
+   The orange color makes the current or hovered page clearer.
+   This helps visitors understand where they are. */
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+    color: var(--accent);
+}
+
+/* This is the hamburger menu button.
+   It stays hidden on desktop because the full navigation fits.
+   It becomes visible on screens smaller than 768px. */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: 1px solid var(--muted);
+    border-radius: 6px;
+    color: var(--text);
+    font-size: 1.6rem;
+    padding: 4px 12px;
+    cursor: pointer;
+}
+
+/* This is the large homepage hero section.
+   Flexbox centers the content vertically and horizontally.
+   min-height: 80vh makes it fill most of the screen. */
+.hero {
+    min-height: 80vh;
+    min-height: 80dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 28px;
+    padding: 70px 6%;
+    background: linear-gradient(145deg, #111827, #263449);
+}
+
+/* This limits the width of the hero text.
+   It keeps long sentences from stretching across the screen.
+   A narrower text area is easier to read. */
+.hero-content {
+    max-width: 850px;
+}
+
+/* This is the main homepage headline.
+   clamp() makes it large on desktop and smaller on phones.
+   The bold text creates a strong first impression. */
+h1 {
+    font-size: clamp(2.3rem, 5vw, 4.5rem);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+/* This styles section headings throughout the website.
+   clamp() changes their size smoothly across screens.
+   Consistent headings help visitors understand each section. */
+h2 {
+    font-size: clamp(1.7rem, 3vw, 2.6rem);
+    line-height: 1.25;
+    margin-bottom: 16px;
+}
+
+/* This styles paragraph text.
+   clamp() adjusts the size to improve readability.
+   The muted color separates descriptions from headings. */
+p {
+    font-size: clamp(1rem, 1.2vw, 1.125rem);
+    color: var(--muted);
+}
+
+/* This adds spacing below the hero description.
+   The space separates the text from the button.
+   It makes the call to action easier to notice. */
+.hero-content p {
+    max-width: 650px;
+    margin: 0 auto 28px;
+}
+
+/* This styles the homepage fitness illustration.
+   The maximum width keeps it from becoming too large.
+   The responsive width allows it to shrink on phones. */
+.hero-image {
+    width: min(100%, 380px);
+    height: auto;
+}
+
+/* These rules create reusable website buttons.
+   Inline-flex centers the text inside each button.
+   Padding and rounded corners make the buttons easy to use. */
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 48px;
+    padding: 12px 26px;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* This styles the main orange buttons.
+   The dark text contrasts with the orange background.
+   The hover effect shows when a visitor points at a button. */
+.btn-primary {
+    background-color: var(--primary);
+    color: #111827;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent);
+    text-decoration: none;
+    transform: translateY(-2px);
+}
+
+/* This is the homepage features section.
+   The padding gives the section room around its content.
+   It separates the feature cards from the hero. */
+.features {
+    padding: 80px 6%;
+}
+
+/* This centers the heading above the feature cards.
+   The bottom margin separates the heading from the cards.
+   It makes the section easier to scan. */
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* This is the responsive feature card layout.
+   CSS Grid creates three equal columns on desktop.
+   The media query changes the cards to one column on phones. */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* This styles each fitness feature card.
+   The surface background separates cards from the page.
+   Padding and rounded corners make the content organized. */
+.feature-card {
+    background-color: var(--surface);
+    padding: 32px 24px;
+    border-radius: 14px;
+    border: 1px solid #374151;
+    text-align: center;
+}
+
+/* This styles the icons above the feature titles.
+   The larger size makes each feature easy to recognize.
+   The bottom margin separates icons from headings. */
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 18px;
+}
+
+/* This styles the titles inside the feature cards.
+   The margin separates each title from its description.
+   The heading size helps organize the information. */
+.feature-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+/* This is the second call-to-action section.
+   It encourages visitors to take the next step.
+   Centered text and spacing make the button stand out. */
+.cta-section {
+    text-align: center;
+    padding: 80px 6%;
+    background-color: var(--surface);
+}
+
+/* This creates space between the CTA text and button.
+   The spacing makes the section easier to read.
+   It keeps the button from touching the description. */
+.cta-section p {
+    margin-bottom: 28px;
+}
+
+/* This is the footer shared by all five pages.
+   It contains copyright, contact information, and links.
+   The centered layout keeps the bottom of the site organized. */
+.site-footer {
+    padding: 36px 6%;
+    text-align: center;
+    background-color: #0b1220;
+    border-top: 1px solid #374151;
+}
+
+/* This separates footer paragraphs.
+   The spacing keeps copyright and contact information readable.
+   It also helps the footer look less crowded. */
+.site-footer p {
+    margin-bottom: 12px;
+}
+
+/* This styles the footer navigation.
+   Flexbox arranges links neatly and allows them to wrap.
+   Wrapping prevents overflow on narrow screens. */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px 22px;
+    margin-top: 18px;
+}
+
+/* This styles keyboard focus.
+   The orange outline shows which link or button is selected.
+   It helps visitors who navigate without a mouse. */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 4px;
+}
+
+/* These are the mobile responsive rules.
+   At 767px or smaller, navigation becomes a hamburger menu.
+   The feature cards stack so the page fits phone screens. */
+@media (max-width: 767px) {
+
+    /* This displays the hamburger button on phones.
+       Visitors can use it to access the five navigation links.
+       It replaces the full desktop navigation row. */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* This hides the navigation until JavaScript opens it.
+       Absolute positioning places it below the header.
+       This keeps the mobile header compact. */
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 12px 6%;
+        background-color: var(--surface);
+        border-bottom: 1px solid #374151;
+    }
+
+    /* JavaScript adds the open class when the menu is clicked.
+       Display flex reveals the navigation links.
+       This makes all five pages accessible on phones. */
+    .site-nav.open {
+        display: flex;
+    }
+
+    /* These rules give mobile navigation links a larger tap area.
+       Padding makes them easier to select on a touchscreen.
+       Each link occupies its own row. */
+    .site-nav a {
+        padding: 12px 8px;
+    }
+
+    /* This changes feature cards to a single column.
+       Each card gets the full available width.
+       It prevents horizontal scrolling on narrow phones. */
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* This reduces section spacing on small screens.
+       Smaller padding leaves more room for content.
+       The website stays comfortable to read at 360px. */
+    .features,
+    .cta-section {
+        padding: 55px 6%;
+    }
+
+    /* This adjusts hero spacing on phones.
+       The content remains centered and the image can shrink.
+       The layout stays readable without horizontal scrolling. */
+    .hero {
+        padding: 55px 6%;
+    }
+}

@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This sets up the Services page.
+         The viewport helps the page fit phones and computers.
+         The stylesheet gives it the same design as Home. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Fitness Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- This is the shared sticky header.
+         It shows the Fitness Hub logo and navigation.
+         Flexbox keeps the logo left and links right. -->
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Fitness Hub Home">
+            <svg width="48" height="48" viewBox="0 0 48 48"
+                 role="img" aria-label="Fitness Hub logo">
+                <circle cx="24" cy="24" r="21" fill="#f97316"></circle>
+                <text x="24" y="30" text-anchor="middle"
+                      fill="#111827" font-size="15"
+                      font-weight="bold">FH</text>
+            </svg>
+            <span>Fitness Hub</span>
+        </a>
+
+        <!-- This button opens the navigation on phones.
+             JavaScript changes its expanded state.
+             This makes all five links available on mobile. -->
+        <button class="menu-toggle" type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            &#9776;
+        </button>
+
+        <!-- These links connect all five pages.
+             The Services link is marked as the current page.
+             Visitors can move between pages without errors. -->
+        <nav id="main-navigation" class="site-nav"
+             aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html" aria-current="page">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- This is the Services page placeholder.
+         It tells visitors where workout information will go.
+         Full workout content will be added in a later assignment. -->
+    <main class="features">
+        <h1>Fitness Hub Workouts and Services</h1>
+        <p>This page is coming soon.</p>
+    </main>
+
+    <!-- This is the shared footer.
+         It displays copyright, contact information, and links.
+         The same footer is used on every page. -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Fitness Hub. All rights reserved.</p>
+        <p>
+            Contact:
+            <a href="mailto:hello@fitnesshub.example">
+                hello@fitnesshub.example
+            </a>
+        </p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </footer>
+
+    <!-- This loads the shared JavaScript file.
+         It makes the mobile navigation button work. -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- This sets up the Gallery page.
+         The viewport supports different screen sizes.
+         The shared stylesheet keeps the design consistent. -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Fitness Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- This is the shared sticky header.
+         It contains the logo and five navigation links.
+         Flexbox places the logo left and navigation right. -->
+    <header class="site-header">
+        <a href="index.html" class="logo" aria-label="Fitness Hub Home">
+            <svg width="48" height="48" viewBox="0 0 48 48"
+                 role="img" aria-label="Fitness Hub logo">
+                <circle cx="24" cy="24" r="21" fill="#f97316"></circle>
+                <text x="24" y="30" text-anchor="middle"
+                      fill="#111827" font-size="15"
+                      font-weight="bold">FH</text>
+            </svg>
+            <span>Fitness Hub</span>
+        </a>
+
+        <!-- This is the mobile hamburger button.
+             It opens and closes navigation on small screens.
+             JavaScript controls its expanded state. -->
+        <button class="menu-toggle" type="button"
+                aria-label="Open navigation menu"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+            &#9776;
+        </button>
+
+        <!-- This navigation connects the five pages.
+             Gallery is marked as the active page.
+             All links use the same filenames as the project. -->
+        <nav id="main-navigation" class="site-nav"
+             aria-label="Main navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html" aria-current="page">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- This is the Gallery page placeholder.
+         It shows where fitness photos and media will go.
+         The full gallery will be completed later. -->
+    <main class="features">
+        <h1>Fitness Hub Gallery</h1>
+        <p>This page is coming soon.</p>
+    </main>
+
+    <!-- This is the shared website footer.
+         It gives visitors copyright and contact information.
+         The same navigation links appear on every page. -->
+    <footer class="site-footer">
+        <p>&copy; 2026 Fitness Hub. All rights reserved.</p>
+        <p>
+            Contact:
+            <a href="mailto:hello@fitnesshub.example">
+                hello@fitnesshub.example
+            </a>
+        </p>
+        <nav class="footer-nav" aria-label="Footer navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="services.html">Services</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </footer>
+
+    <!-- This connects the shared JavaScript.
+         It controls the mobile hamburger navigation. -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+    

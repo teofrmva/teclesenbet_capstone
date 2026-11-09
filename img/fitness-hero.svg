@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="600" height="400"
+     viewBox="0 0 600 400"
+     role="img"
+     aria-labelledby="title desc">
+
+  <title id="title">Fitness Hub Workout Illustration</title>
+  <desc id="desc">An orange dumbbell with fitness decorations on a dark background.</desc>
+
+  <!-- This is the background.
+       It creates a dark area behind the equipment.
+       The color matches the Fitness Hub website. -->
+  <rect width="600" height="400" rx="30" fill="#1f2937"/>
+
+  <!-- This is the center bar of the dumbbell.
+       It connects the weights on both sides.
+       The light color makes the bar easy to see. -->
+  <rect x="165" y="185" width="270" height="30"
+        rx="10" fill="#d1d5db"/>
+
+  <!-- These are the left weight plates.
+       The orange rectangles represent gym equipment.
+       Different sizes make the dumbbell look realistic. -->
+  <rect x="125" y="130" width="45" height="140"
+        rx="12" fill="#f97316"/>
+  <rect x="95" y="155" width="30" height="90"
+        rx="8" fill="#fdba74"/>
+
+  <!-- These are the right weight plates.
+       They match the left side of the dumbbell.
+       This creates a balanced fitness illustration. -->
+  <rect x="430" y="130" width="45" height="140"
+        rx="12" fill="#f97316"/>
+  <rect x="475" y="155" width="30" height="90"
+        rx="8" fill="#fdba74"/>
+
+  <!-- This is the Fitness Hub text.
+       It identifies the illustration with the website.
+       The bold text creates a clear visual title. -->
+  <text x="300" y="335"
+        text-anchor="middle"
+        font-family="Arial, sans-serif"
+        font-size="34"
+        font-weight="bold"
+        fill="#f9fafb">
+    FITNESS HUB
+  </text>
+
+</svg>
+
+
+
