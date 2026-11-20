@@ -380,3 +380,137 @@ button:focus-visible {
         padding: 55px 6%;
     }
 }
+
+/* FITNESS HUB - ABOUT PAGE */
+
+.about-hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: #1f2937;
+}
+
+.about-hero h1 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    color: #f97316;
+    margin-bottom: 20px;
+}
+
+.about-hero p {
+    max-width: 650px;
+    margin: 0 auto;
+    color: #f9fafb;
+    line-height: 1.7;
+}
+
+/* Our Story - Two Column Grid */
+
+.about-story {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 70px 24px;
+}
+
+.story-text h2 {
+    color: #f97316;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    color: #f9fafb;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.story-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Fitness Values */
+
+.about-values {
+    padding: 70px 24px;
+    background: #1f2937;
+    text-align: center;
+}
+
+.about-values h2 {
+    color: #f97316;
+    margin-bottom: 35px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.value-card {
+    background: #111827;
+    border-radius: 12px;
+    padding: 30px 24px;
+    text-align: center;
+}
+
+.value-card svg {
+    margin-bottom: 15px;
+}
+
+.value-card h3 {
+    color: #fdba74;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: #f9fafb;
+    line-height: 1.7;
+}
+
+/* Mission Statement */
+
+.mission-callout {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 30px;
+    border-left: 6px solid #f97316;
+    background: #1f2937;
+}
+
+.mission-callout h2 {
+    color: #fdba74;
+    margin-bottom: 15px;
+}
+
+.mission-callout p {
+    line-height: 1.8;
+}
+
+/* Mobile Layout */
+
+@media (max-width: 600px) {
+    .about-story {
+        grid-template-columns: 1fr;
+        padding: 40px 20px;
+    }
+
+    .about-hero {
+        padding: 55px 20px;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mission-callout {
+        margin: 35px 20px;
+        padding: 20px;
+    }
+}
