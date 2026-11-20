@@ -2,44 +2,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- This sets up the About page.
-         It makes the page work on different screen sizes
-         and connects it to the shared stylesheet. -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Fitness Hub</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-    <!-- This is the shared sticky header.
-         It shows the Fitness Hub logo and navigation.
-         The same header is used on every page. -->
     <header class="site-header">
         <a href="index.html" class="logo" aria-label="Fitness Hub Home">
-            <svg width="48" height="48" viewBox="0 0 48 48"
-                 role="img" aria-label="Fitness Hub logo">
-                <circle cx="24" cy="24" r="21" fill="#f97316"></circle>
-                <text x="24" y="30" text-anchor="middle"
-                      fill="#111827" font-size="15"
-                      font-weight="bold">FH</text>
+            <svg width="48" height="48" viewBox="0 0 100 100"
+                 role="img" aria-labelledby="fitness-logo-title">
+                <title id="fitness-logo-title">Fitness Hub dumbbell logo</title>
+                <circle cx="50" cy="50" r="47" fill="#f97316"/>
+                <rect x="20" y="43" width="60" height="14" rx="4" fill="#111827"/>
+                <rect x="17" y="31" width="14" height="38" rx="3" fill="#111827"/>
+                <rect x="69" y="31" width="14" height="38" rx="3" fill="#111827"/>
+                <polygon points="50,17 54,26 64,27 57,34 59,43 50,38 41,43 43,34 36,27 46,26" fill="#ffffff"/>
             </svg>
             <span>Fitness Hub</span>
         </a>
 
-        <!-- This button opens the mobile navigation.
-             It helps phone users reach every page. -->
         <button class="menu-toggle" type="button"
                 aria-label="Open navigation menu"
                 aria-expanded="false"
-                aria-controls="main-navigation">
-            &#9776;
-        </button>
+                aria-controls="main-navigation">&#9776;</button>
 
-        <!-- This navigation connects all five pages.
-             The links are the same throughout the website. -->
-        <nav id="main-navigation" class="site-nav"
-             aria-label="Main navigation">
+        <nav id="main-navigation" class="site-nav" aria-label="Main navigation">
             <a href="index.html">Home</a>
             <a href="about.html" aria-current="page">About</a>
             <a href="services.html">Services</a>
@@ -48,22 +36,69 @@
         </nav>
     </header>
 
-    <!-- This is the About page placeholder.
-         The full story and values will be added later. -->
-    <main class="features">
-        <h1>About Fitness Hub</h1>
-        <p>This page is coming soon.</p>
+    <main>
+        <section class="about-hero">
+            <h1>About Fitness Hub</h1>
+            <p>Helping people become stronger, healthier, and more confident every day.</p>
+        </section>
+
+        <section class="about-story" aria-labelledby="story-title">
+            <div class="story-text">
+                <h2 id="story-title">Our Story</h2>
+                <p>Fitness Hub was created to help people improve their health and reach their fitness goals. We believe that everyone deserves the chance to become stronger and feel better about themselves.</p>
+                <p>Our goal is to make fitness simple and enjoyable for beginners and experienced athletes. Whether someone wants to build muscle, lose weight, improve endurance, or live a healthier lifestyle, Fitness Hub provides motivation and helpful workout ideas.</p>
+                <p>We understand that starting a fitness journey can be difficult. That is why we encourage people to take small steps, stay consistent, and celebrate their progress. Fitness is not about being perfect. It is about improving a little every day.</p>
+            </div>
+
+            <div class="story-image">
+                <img src="img/fitness-story.jpg"
+                     alt="Person training with weights in a gym"
+                     width="600" height="400">
+            </div>
+        </section>
+
+        <section class="about-values" aria-labelledby="values-title">
+            <h2 id="values-title">What We Believe</h2>
+            <div class="values-grid">
+                <article class="value-card">
+                    <svg width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+                        <circle cx="26" cy="26" r="23" fill="#f97316"/>
+                        <path d="M15 27 L23 35 L38 17" fill="none" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Discipline</h3>
+                    <p>Discipline helps us stay focused on our goals even when things become challenging.</p>
+                </article>
+
+                <article class="value-card">
+                    <svg width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+                        <circle cx="26" cy="26" r="23" fill="#f97316"/>
+                        <path d="M26 12 V26 L36 32" fill="none" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Consistency</h3>
+                    <p>Small efforts every day lead to bigger results over time. Keep showing up.</p>
+                </article>
+
+                <article class="value-card">
+                    <svg width="52" height="52" viewBox="0 0 52 52" aria-hidden="true">
+                        <circle cx="26" cy="26" r="23" fill="#f97316"/>
+                        <path d="M14 36 L25 25 L32 30 L40 15 M31 15 H40 V24" fill="none" stroke="#111827" stroke-width="4" stroke-linejoin="round" stroke-linecap="round"/>
+                    </svg>
+                    <h3>Growth</h3>
+                    <p>We believe everyone can improve through patience, hard work, and dedication.</p>
+                </article>
+            </div>
+        </section>
+
+        <aside class="mission-callout">
+            <h2>Our Mission</h2>
+            <p>Our mission is to inspire people to stay active, build healthy habits, and become the best version of themselves.</p>
+        </aside>
     </main>
 
-    <!-- This is the shared footer.
-         It provides copyright, contact information,
-         and navigation on every page. -->
     <footer class="site-footer">
         <p>&copy; 2026 Fitness Hub. All rights reserved.</p>
         <p>Contact:
-            <a href="mailto:hello@fitnesshub.example">
-                hello@fitnesshub.example
-            </a>
+            <a href="mailto:hello@fitnesshub.example">hello@fitnesshub.example</a>
         </p>
         <nav class="footer-nav" aria-label="Footer navigation">
             <a href="index.html">Home</a>
@@ -74,8 +109,6 @@
         </nav>
     </footer>
 
-    <!-- This connects the shared JavaScript.
-         It controls the hamburger navigation on phones. -->
     <script src="js/script.js"></script>
 </body>
 </html>
